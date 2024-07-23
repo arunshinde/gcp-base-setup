@@ -4,7 +4,7 @@ This repository provides a base setup for your GCP project.
 **Getting Started**
 1. Download: Clone or download this repository.
 2. Configuration:
-   _ Open Constants.java.
+   - Open Constants.java.
    - Set the following values:
      	* PROJECT_ID: Your GCP project ID
 3. Now setup the following individual GCP product settings.
