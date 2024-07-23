@@ -22,7 +22,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
-		<dista.local.libpath>${project.basedir}/src/main/resources/lib</dista.local.libpath>
+		<gcp.poc.local.libpath>${project.basedir}/src/main/resources/lib</gcp.poc.local.libpath>
 		
 		<bcpg-jdk18on.version>1.78.1</bcpg-jdk18on.version>
 		<bcprov-jdk18on.version>1.78</bcprov-jdk18on.version>
@@ -189,7 +189,7 @@
 				</executions>
 				<configuration>
 					<!-- Specify the main class to run -->
-					<mainClass>com.dista.DistaApplication</mainClass>
+					<mainClass>com.gcp.cloud.poc.GCPCloudApplication</mainClass>
 				</configuration>
 			</plugin>
 			<plugin>
