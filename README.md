@@ -7,7 +7,7 @@ This repository provides a base setup for your GCP project.
    - Open Constants.java.
    - Set the following values:
      	* PROJECT_ID: Your GCP project ID
-3. Now setup the following individual GCP product settings.
+3. Now setup the following individual GCP product settings e.g. **Firestore Setup:**
 4. Run/Debug the GCPCloudApplication.
    
 **Firestore Setup:**
