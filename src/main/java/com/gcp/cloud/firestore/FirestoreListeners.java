@@ -2,6 +2,7 @@ package com.gcp.cloud.firestore;
 
 import com.google.cloud.firestore.CollectionReference;
 import com.google.cloud.firestore.DocumentChange;
+import com.google.cloud.firestore.DocumentReference;
 import com.google.cloud.firestore.ListenerRegistration;
 
 public class FirestoreListeners {
@@ -25,16 +26,28 @@ public class FirestoreListeners {
             	System.out.println("Document ID:" + dc.getDocument().getId());
                 switch (dc.getType()) {
                     case ADDED:
-                        System.out.println("New document: " + dc.getDocument().getData());
+                        System.out.println("Data is added: " + dc.getDocument().getData());
+                        removeDataFromFirestore(dc.getDocument().getReference());
                         break;
                     case MODIFIED:
-                        System.out.println("Modified document: " + dc.getDocument().getData());
+                        System.out.println("Updated data: " + dc.getDocument().getData());
+                        removeDataFromFirestore(dc.getDocument().getReference());
                         break;
                     case REMOVED:
-                        System.out.println("Removed document: " + dc.getDocument().getId());
+                        System.out.println("Removed data: " + dc.getDocument().getId());
+                        //Handle more events
                         break;
                 }
             }
         });
+	}
+	
+	/**
+	 * Delete the data from the 
+	 * @author arun
+	 * @param documentReference
+	 */
+	private static void removeDataFromFirestore(DocumentReference documentReference) {
+		documentReference.delete();
 	}
 }
