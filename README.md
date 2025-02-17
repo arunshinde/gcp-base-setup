@@ -17,8 +17,7 @@ This repository provides a base setup for your GCP project.
 2. Test Connection:
 	- Visit http://localhost:8080/run/firebase to verify that the Firebase connection is working.
 
-Other GCP Product
-Coming Soon! This section will contain configuration and instructions for other GCP products.
+This section will contain configuration and instructions for other GCP products.
 
 Additional Notes:
 
